@@ -19,8 +19,8 @@ class LoginPresenter {
     func login(userModel: UserModel) {
         let manager = UserManager(business: UserBusiness())
         manager.login(email: userModel.email,
-                      password: userModel.password) { userModel in
-            self.goHome()
+                      password: userModel.password) { [weak self] userModel in
+            self?.goHome()
         } failureHandler: { [weak self] error in
             self?.delegate?.showMessage(title: "Erro", message: error?.localizedDescription ?? "Nao foi possível identificar o erro.")
         }
