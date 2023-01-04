@@ -14,6 +14,8 @@
 		9699387F2965EFBB0030ED41 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699387E2965EFBB0030ED41 /* Coordinator.swift */; };
 		969938812965F13C0030ED41 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969938802965F13C0030ED41 /* LoginCoordinator.swift */; };
 		969938832965F1CA0030ED41 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969938822965F1CA0030ED41 /* UIColor+Extension.swift */; };
+		969938862965F4BD0030ED41 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969938852965F4BD0030ED41 /* LoginView.swift */; };
+		96993888296608C10030ED41 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96993887296608C10030ED41 /* UITextField+Extension.swift */; };
 		969DE89E295DA38C00BC6758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 969DE89D295DA38C00BC6758 /* GoogleService-Info.plist */; };
 		969DE8A1295DA3E100BC6758 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DE8A0295DA3E100BC6758 /* Constants.swift */; };
 		969DE8A8295DA43800BC6758 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969DE8A7295DA43800BC6758 /* UserModel.swift */; };
@@ -39,6 +41,8 @@
 		9699387E2965EFBB0030ED41 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		969938802965F13C0030ED41 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		969938822965F1CA0030ED41 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		969938852965F4BD0030ED41 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		96993887296608C10030ED41 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		969DE89D295DA38C00BC6758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		969DE8A0295DA3E100BC6758 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		969DE8A7295DA43800BC6758 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				969DE8B4295DA6FD00BC6758 /* LoginViewController.swift */,
+				969938852965F4BD0030ED41 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			children = (
 				969DE8A0295DA3E100BC6758 /* Constants.swift */,
 				969938822965F1CA0030ED41 /* UIColor+Extension.swift */,
+				96993887296608C10030ED41 /* UITextField+Extension.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96993888296608C10030ED41 /* UITextField+Extension.swift in Sources */,
 				969DE8B1295DA6B800BC6758 /* RegisterViewController.swift in Sources */,
 				969DE8AE295DA64500BC6758 /* UserBusiness.swift in Sources */,
 				969DE8AA295DA45400BC6758 /* UserProvider.swift in Sources */,
@@ -332,6 +339,7 @@
 				9671B34E295A0450002056F7 /* AppDelegate.swift in Sources */,
 				969938812965F13C0030ED41 /* LoginCoordinator.swift in Sources */,
 				9699387F2965EFBB0030ED41 /* Coordinator.swift in Sources */,
+				969938862965F4BD0030ED41 /* LoginView.swift in Sources */,
 				9671B350295A0450002056F7 /* SceneDelegate.swift in Sources */,
 				969DE8A8295DA43800BC6758 /* UserModel.swift in Sources */,
 				969938832965F1CA0030ED41 /* UIColor+Extension.swift in Sources */,
