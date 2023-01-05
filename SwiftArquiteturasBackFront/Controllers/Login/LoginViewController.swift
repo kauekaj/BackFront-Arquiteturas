@@ -45,6 +45,18 @@ class LoginViewController: UIViewController {
         
     private func loginTap(_ email: String, _ password: String) {
         
+        let userViewModel = UserViewModel()
+        
+        userViewModel.getUserFromApi(email, password) { [weak self] result in
+            switch result {
+                
+            case .success(_):
+                self?.onLoginSuccess?()
+            case .failure(let error):
+                self?.showMessage("Erro", error.localizedDescription)
+            }
+        }
+        
         let manager = UserManager(business: UserBusiness())
         
         manager.login(email: email,
