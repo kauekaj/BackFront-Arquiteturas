@@ -10,6 +10,12 @@ import UIKit
 
 class LoginView: UIView {
     
+    // MARK: - Clousures
+
+    var onRegisterTap:(() -> Void)?
+    var onLoginTap:((_ email: String, _ password: String) -> Void)?
+
+    
     // MARK: - Properties
     
     lazy var emailLabel: UILabel = {
@@ -66,6 +72,8 @@ class LoginView: UIView {
         element.setTitle("Entrar", for: .normal)
         element.backgroundColor = .systemBlue
         element.layer.cornerRadius = 10
+        element.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+
         return element
     }()
     
@@ -76,6 +84,7 @@ class LoginView: UIView {
         element.setTitle("Registrar", for: .normal)
         element.backgroundColor = .systemBlue
         element.layer.cornerRadius = 10
+        element.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         return element
     }()
     
@@ -140,4 +149,17 @@ class LoginView: UIView {
     
     // MARK: - Actions
     
+    @objc
+    func registerButtonTapped() {
+        self.onRegisterTap?()
+    }
+    
+    @objc
+    func loginButtonTapped() {
+        if let email  = emailTextField.text,
+           let password = passwordTextField.text {
+            self.onLoginTap?(email, password)
+        }
+        // Message to inform textField must be filled
+    }
 }

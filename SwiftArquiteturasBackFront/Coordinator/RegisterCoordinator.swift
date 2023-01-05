@@ -1,24 +1,18 @@
 //
-//  LoginCoordinator.swift
+//  RegisterCoordinator.swift
 //  SwiftArquiteturasBackFront
 //
-//  Created by Kaue de Assis Jacyntho on 04/01/23.
+//  Created by Kaue de Assis Jacyntho on 05/01/23.
 //
 
 import Foundation
 import UIKit
 
-class LoginCoordinator: Coordinator {
+class RegisterCoordinator: Coordinator {
     var navigationController: UINavigationController
     
     func start() {
-        let viewController = LoginViewController()
-        
-        viewController.onRegisterTap = {
-            let coordinator = RegisterCoordinator(navigationController: self.navigationController)
-            coordinator.start()
-        }
-        
+        let viewController = RegisterViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
