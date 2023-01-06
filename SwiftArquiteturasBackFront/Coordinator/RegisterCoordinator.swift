@@ -13,7 +13,18 @@ class RegisterCoordinator: Coordinator {
     
     func start() {
         let viewController = RegisterViewController()
+        
+        viewController.onLoginTap = {
+            self.navigationController.popToRootViewController(animated: true)
+        }
+        
+        viewController.onRegisterSuccess = {
+            let coordinator = HomeCoordinator(navigationController: self.navigationController)
+            coordinator.start()
+        }
+        
         self.navigationController.pushViewController(viewController, animated: true)
+
     }
     
     required init(navigationController: UINavigationController) {

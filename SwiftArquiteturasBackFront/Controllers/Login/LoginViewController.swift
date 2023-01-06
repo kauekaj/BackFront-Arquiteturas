@@ -36,13 +36,13 @@ class LoginViewController: UIViewController {
         
     }
     
-  
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Login"
     }
         
+    // MARK: - Actions
     private func loginTap(_ email: String, _ password: String) {
         
         let userViewModel = UserViewModel()
@@ -57,15 +57,6 @@ class LoginViewController: UIViewController {
             }
         }
         
-        let manager = UserManager(business: UserBusiness())
-        
-        manager.login(email: email,
-                      password: password) { [weak self] userModel in
-            self?.onLoginSuccess?()
-        } failureHandler: { [weak self] error in
-            self?.showMessage("Erro", error?.localizedDescription ?? "Erro ao Logar. Tente novamente")
-        }
-
     }
     
     func showMessage(_ title: String, _ message: String) {

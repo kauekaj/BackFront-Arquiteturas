@@ -124,6 +124,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		969667E6296782E10088B7D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				969DE8B2295DA6E200BC6758 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		9699387D2965EFA30030ED41 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +217,9 @@
 		969DE8AF295DA69D00BC6758 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				969667E6296782E10088B7D7 /* Home */,
 				9699388929660B960030ED41 /* Register */,
 				969938842965F30D0030ED41 /* Login */,
-				969DE8B2295DA6E200BC6758 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
